@@ -68,6 +68,23 @@ INSERT INTO PE_PE
 	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
 	"00000000-0000-0000-0000-000000000000",
 	1);
+INSERT INTO S_SYNC
+	VALUES ("f83b7be3-aff3-4d54-bdd4-d7be749e968c",
+	"00000000-0000-0000-0000-000000000000",
+	'start2',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller4:''start2'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("f83b7be3-aff3-4d54-bdd4-d7be749e968c",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
 INSERT INTO PE_PE
 	VALUES ("c266a8d5-aa61-43f4-9d01-7e2baedb603e",
 	1,

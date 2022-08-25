@@ -23,6 +23,7 @@
 #include <ros/duration.h>
 #include <iostream>
 #include <string>
+#include <string.h>
 #include <signal.h>
 
 /**
@@ -470,8 +471,14 @@ int gnc_land()
 
 void command_cb(const std_msgs::String::ConstPtr& msg)
 {
-	ROS_INFO("recv message");
-	Control_halt();
+	if (strcmp(msg->data.c_str(), "start") == 0) {
+		ROS_INFO("recv message start");
+		Control_start2();
+	}
+	if (strcmp(msg->data.c_str(), "halt") == 0) {
+		ROS_INFO("recv message halt");
+		Control_halt();
+	}
 }
 
 /**
